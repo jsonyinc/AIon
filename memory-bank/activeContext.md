@@ -1,31 +1,31 @@
 # Active Context for AIon_Replit
 
 ## Current Focus
-- AION 랜딩 페이지 개발
-- 기술 스택 전환: Vite/React에서 Next.js/React로, 백엔드는 Supabase로 전환
-- 시각적 스타일 가이드 적용
+- AION 랜딩 페이지 개발 완료
+- Supabase RLS 정책 설정 문제 해결
+- 새로운 프로젝트로 전환 준비
 
 ## Recent Changes
 - 2025년 5월 12일: Memory Bank 폴더 및 초기 파일 생성 (`projectbrief.md`, `productContext.md`)
 - 2025년 5월 12일: 랜딩 페이지 구조 및 콘텐츠 전략 수립
 - 2025년 5월 12일: 시각적 스타일 가이드 분석 및 적용 계획 수립
 - 2025년 5월 12일: 기술 스택 전환 계획 수립 (Next.js, Tailwind CSS with Shadcn UI, Vercel, Supabase)
+- 2025년 5월 13일: RomiⒻ 시각적 스타일 가이드에 맞춰 모든 주요 컴포넌트 업데이트
+- 2025년 5월 13일: Supabase 백엔드 설정 및 연결 테스트 성공
+- 2025년 5월 13일: 문의 양식 데이터를 `contacts` 테이블에 저장하는 기능 구현
+- 2025년 5월 13일: 불필요한 테스트 코드 제거
+- 2025년 5월 13일: 프로젝트 파일 GitHub 저장소 푸시 완료 (`https://github.com/jsonyinc/AIon.git`)
 
 ## Next Steps
-1. Memory Bank 파일 업데이트 (activeContext.md, techContext.md, progress.md)
-2. Next.js 프로젝트 설정 및 기존 코드 마이그레이션
-3. Supabase 백엔드 설정 및 통합
-4. Shadcn UI 컴포넌트 설치 및 적용
-5. Vercel 배포 설정
-6. 랜딩 페이지 섹션별 컴포넌트 개발 (히어로, 문제 제기, 솔루션 등)
-7. 시각적 스타일 가이드에 따른 디자인 적용
-8. 테스트 및 최적화 (모바일 반응형, 성능 등)
+1. Supabase 대시보드에서 `contacts` 테이블의 RLS 정책 설정 (`anon` 역할에 대한 `INSERT` 권한 부여)
+2. 새로운 프로젝트로 전환 준비 및 현재 컨텍스트 저장
 
 ## Active Decisions and Considerations
 - Next.js를 사용하여 서버 사이드 렌더링(SSR) 및 정적 사이트 생성(SSG) 활용
 - Supabase를 백엔드로 사용하여 데이터베이스 및 인증 기능 통합
 - Shadcn UI를 통해 Tailwind CSS 기반의 UI 컴포넌트 활용
 - Vercel을 통한 배포 및 CI/CD 파이프라인 설정
+- Supabase RLS 정책 설정으로 익명 사용자 데이터 삽입 문제 해결 필요
 
 ## Important Patterns and Preferences
 - 반응형 디자인을 우선시하여 모바일 및 데스크톱 사용자 모두에게 최적화
@@ -36,4 +36,5 @@
 ## Learnings and Project Insights
 - 초기 설정 단계에서 기술 스택 전환 계획이 중요함을 확인
 - 시각적 스타일 가이드와 콘텐츠 전략의 조화가 전환율 극대화에 필수적임을 인지
-- 프로젝트 진행 중 발견되는 문제 및 해결책을 지속적으로 기록 예정
+- Supabase 연결 테스트 중 다양한 방법 시도 후 `contacts` 테이블 쿼리로 성공
+- RLS 정책 설정 오류로 익명 사용자 데이터 삽입 문제 발생, 대시보드에서 정책 설정 필요
