@@ -1,0 +1,52 @@
+@import "tailwindcss";
+@import "@fontsource/montserrat";
+@import "@fontsource/inter";
+
+:root {
+  --background: #F8F9FA; /* 클라우드 화이트 */
+  --foreground: #0A2540; /* 신뢰감 있는 네이비 */
+  --primary: #0A2540; /* 신뢰감 있는 네이비 */
+  --primary-foreground: #FFFFFF; /* 흰색 */
+  --secondary: #00C49A; /* 혁신적인 청록색 */
+  --secondary-foreground: #0A2540; /* 신뢰감 있는 네이비 */
+  --accent: #FF7A00; /* 액션 오렌지 */
+  --accent-foreground: #FFFFFF; /* 흰색 */
+  --neutral-cloudWhite: #F8F9FA;
+  --neutral-steelGray: #6C757D;
+  --neutral-charcoalGray: #343A40;
+  --neutral-silverLine: #DEE2E6;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-neutral-cloudWhite: var(--neutral-cloudWhite);
+  --color-neutral-steelGray: var(--neutral-steelGray);
+  --color-neutral-charcoalGray: var(--neutral-charcoalGray);
+  --color-neutral-silverLine: var(--neutral-silverLine);
+  --font-montserrat: var(--font-montserrat);
+  --font-inter: var(--font-inter);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #121212; /* 다크 모드 기본 */
+    --foreground: #E0E0E0; /* 다크 모드 텍스트 */
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+}
