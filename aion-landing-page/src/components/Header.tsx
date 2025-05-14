@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
+
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -9,7 +11,10 @@ export default function Header() {
   return (
     <header className="bg-primary text-white">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="text-2xl font-bold">AION</div>
+        <div className="flex items-center">
+          <Image src="/logo.png" alt="AION Logo" width={60} height={60} className="mr-2" />
+          <div className="text-3xl font-bold">AIon</div>
+        </div>
         <nav className="hidden md:flex space-x-6">
           <a href="#features" className="hover:text-secondary">Features</a>
           <a href="#benefits" className="hover:text-secondary">Benefits</a>

@@ -17,7 +17,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            AI로 혁신하는 비즈니스 미래, AION
+            AI로 혁신하는 비즈니스 미래, AIon
           </motion.h1>
           <motion.p 
             className="text-xl md:text-2xl mb-8 text-primary-foreground/90"
