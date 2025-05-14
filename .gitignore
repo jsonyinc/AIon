@@ -1,5 +1,6 @@
 # Node.js
 node_modules/
+aion-landing-page/node_modules/
 npm-debug.*
 yarn-debug.*
 yarn-error.*
@@ -16,12 +17,21 @@ Thumbs.db
 .env.development.local
 .env.test.local
 .env.production.local
+aion-landing-page/.env
+aion-landing-page/.env.local
+aion-landing-page/.env.development.local
+aion-landing-page/.env.test.local
+aion-landing-page/.env.production.local
 
 # Next.js build output
 .next
 out
 dist
 build
+aion-landing-page/.next
+aion-landing-page/out
+aion-landing-page/dist
+aion-landing-page/build
 
 # Dependency lock files (optional, uncomment if you want to ignore)
 # package-lock.json
