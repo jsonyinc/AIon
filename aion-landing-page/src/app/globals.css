@@ -1,7 +1,13 @@
-@import "tailwindcss";
+/* 1. @fontsource 폰트 임포트 */
 @import "@fontsource/montserrat";
 @import "@fontsource/inter";
 
+/* 2. Tailwind CSS 지시문 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 3. 사용자 정의 CSS 변수 (라이트 모드) */
 :root {
   --background: #F8F9FA; /* 클라우드 화이트 */
   --foreground: #0A2540; /* 신뢰감 있는 네이비 */
@@ -15,38 +21,37 @@
   --neutral-steelGray: #6C757D;
   --neutral-charcoalGray: #343A40;
   --neutral-silverLine: #DEE2E6;
+
+  /* tailwind.config.ts 에서 사용한 --radius 변수 정의 (필요하다면 여기에 추가) */
+  /* --radius: 0.5rem; /* 예시 값 */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-neutral-cloudWhite: var(--neutral-cloudWhite);
-  --color-neutral-steelGray: var(--neutral-steelGray);
-  --color-neutral-charcoalGray: var(--neutral-charcoalGray);
-  --color-neutral-silverLine: var(--neutral-silverLine);
-  --font-montserrat: var(--font-montserrat);
-  --font-inter: var(--font-inter);
-}
+/* @theme inline {...} 블록은 올바른 CSS/Tailwind 문법이 아니므로 삭제합니다. */
 
+/* 4. 사용자 정의 CSS 변수 (다크 모드, OS 설정에 따름) */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #121212; /* 다크 모드 기본 */
     --foreground: #E0E0E0; /* 다크 모드 텍스트 */
+    /* 다크 모드에 대한 다른 변수 오버라이드 필요시 여기에 추가 */
+    /* 예: --primary: #1E3A8A; */
   }
 }
 
+/* 5. 기본 엘리먼트 스타일 */
 body {
+  /* Tailwind의 preflight가 기본 margin 등을 제거하므로 필요한 스타일을 추가 */
   background: var(--background);
   color: var(--foreground);
   font-family: 'Inter', sans-serif;
+  line-height: 1.5; /* 가독성을 위해 기본 line-height 추가 권장 */
 }
 
 h1, h2, h3, h4 {
   font-family: 'Montserrat', sans-serif;
+  /* 기본 margin-top, margin-bottom 추가 권장 (preflight가 제거함) */
+  /* margin-top: 1em; */
+  /* margin-bottom: 0.5em; */
 }
+
+/* 필요한 경우 여기에 추가적인 전역 스타일 작성 */
